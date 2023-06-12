@@ -48,7 +48,11 @@ public class Product implements Serializable{
 		this.stockQuantity = stockQuantity;
 	}
 	
-
+	public void sale() throws MyExeptions{
+		if(this.stockQuantity > 0) this.stockQuantity--;
+		
+		else throw new MyExeptions("Produto não esta disponivel"); 
+	}
 	
 	
 }
