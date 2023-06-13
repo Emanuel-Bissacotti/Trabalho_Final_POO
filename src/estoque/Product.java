@@ -10,6 +10,11 @@ public class Product implements Serializable{
 	private double priceSale;
 	private int stockQuantity;
 	
+	public Product(int cod, int stockQuantity) {
+		this.cod = cod;
+		this.stockQuantity = stockQuantity;
+	}
+	
 	public Product(int cod, String description, double priceCost, double priceSale, int stockQuantity) {
 		super();
 		this.cod = cod;
@@ -48,11 +53,14 @@ public class Product implements Serializable{
 		this.stockQuantity = stockQuantity;
 	}
 	
-	public void sale() throws MyExeptions{
-		if(this.stockQuantity > 0) this.stockQuantity--;
-		
-		else throw new MyExeptions("Produto não esta disponivel"); 
+	public boolean sale(int quantity) {
+		if(this.stockQuantity >= quantity) {
+			this.stockQuantity -= quantity;
+			return true;
+		}
+		return false;
 	}
+
 	
 	
 }
