@@ -20,7 +20,7 @@ O sistema deverá ter **um menu (com laço infinito)** que ofereça as seguintes
 
 `A classe produtos deverá possuir os atributos privados: Código, descrição, preço de custo, preço de venda e estoque disponível. Todos os atributos devem possuir getters. Deve existir também um método de venda (redução de estoque). Os setters só devem existir para atributos que vão ser alterados após eles serem construídos.`
 
-## Parte 2
+### Parte 2
 Utilizando a base desenvolvida de cadastro de produtos, agora implemente uma aplicação cliente x servidor
 
 - Crie um cliente que envie para o servidor o código do produto e quantidade.
